@@ -168,19 +168,28 @@ export default function App() {
                     <Sparkles size={14} />
                     The Future of Learning is Here
                   </motion.div>
-                  <motion.h1 
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7, ease: "easeOut" }}
-                    className="text-5xl md:text-8xl font-display font-black text-text-primary leading-[1.1] tracking-tight"
-                  >
-                    Turn Lectures into <br />
-                    <span className="gradient-text">Smart Material</span>
-                  </motion.h1>
+                  <h1 className="text-5xl md:text-8xl font-hero tracking-tighter text-text-primary leading-[1.1]">
+                    <motion.span
+                      initial={{ opacity: 0, y: 15 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, ease: "easeOut" }}
+                      className="block font-semibold"
+                    >
+                      Turn Lectures into
+                    </motion.span>
+                    <motion.span
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+                      className="gradient-text font-bold glow-pulse"
+                    >
+                      Smart Material
+                    </motion.span>
+                  </h1>
                   <motion.p 
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+                    transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
                     className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed font-medium"
                   >
                     Instant study guides, flashcards, and quizzes powered by AI. 🧠 <br className="hidden md:block" />
@@ -189,19 +198,19 @@ export default function App() {
                 </div>
 
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4, duration: 0.7 }}
+                  transition={{ delay: 0.8, duration: 0.6, ease: "easeOut" }}
                   className="max-w-3xl mx-auto"
                 >
-                  <form onSubmit={handleAnalyze} className="relative group">
+                  <form onSubmit={handleAnalyze} className="relative group focus-glow rounded-3xl">
                     <div className="absolute inset-y-0 left-6 flex items-center pointer-events-none text-text-secondary group-focus-within:text-brand-cyan transition-colors">
                       <Youtube size={28} />
                     </div>
                     <input
                       type="text"
                       placeholder="Paste YouTube lecture URL here..."
-                      className="w-full pl-16 pr-64 py-6 bg-white/5 border border-white/10 rounded-3xl shadow-2xl focus:border-brand-cyan focus:ring-8 focus:ring-brand-cyan/5 outline-none text-xl transition-all text-text-primary placeholder:text-text-secondary/50 backdrop-blur-md"
+                      className="w-full pl-16 pr-64 py-6 bg-white/5 border border-white/10 rounded-3xl shadow-2xl focus:border-brand-cyan/50 focus:ring-0 outline-none text-xl transition-all text-text-primary placeholder:text-text-secondary/50 backdrop-blur-md"
                       value={url}
                       onChange={(e) => setUrl(e.target.value)}
                     />

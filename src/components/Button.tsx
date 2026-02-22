@@ -17,10 +17,10 @@ export const Button: React.FC<ButtonProps> = ({
   className = '',
   ...props
 }) => {
-  const baseStyles = 'inline-flex items-center justify-center gap-2 font-bold transition-all disabled:opacity-70 disabled:cursor-not-allowed active:scale-[0.98] hover:scale-[1.02] rounded-full';
+  const baseStyles = 'inline-flex items-center justify-center gap-2 font-bold transition-all disabled:opacity-70 disabled:cursor-not-allowed active:scale-[0.98] hover:scale-[1.03] rounded-full';
   
   const variants = {
-    primary: 'spark-gradient text-white hover:glow-primary shadow-lg shadow-brand-blue/20',
+    primary: 'spark-gradient text-white hover:glow-primary shadow-lg shadow-brand-blue/20 shimmer-effect',
     secondary: 'bg-transparent border border-brand-cyan/50 text-brand-cyan hover:bg-brand-cyan/10 hover:glow-cyan',
     outline: 'border border-white/10 hover:border-white/30 bg-white/5 text-text-primary',
     ghost: 'hover:bg-white/5 text-text-secondary hover:text-text-primary'
